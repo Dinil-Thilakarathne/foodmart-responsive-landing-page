@@ -1,0 +1,95 @@
+@use '../abstracts'  as *;
+
+footer{
+    width: min(100%, 1024px);
+    // width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+    
+    & .footer-content{
+        width: min(100%, 1024px);
+        @include grid($justify: start,$row-gap : 20px ,$col-gap: 20px);
+        padding: 20px min(3vw, 20px);
+
+        @include mq(medium) {
+            grid-template-columns: 40% 60%;
+        }
+
+        & .content__body{
+            @include flex_box($direction: column, $align: flex-start, $row-gap: 10px);
+
+            & .icon__list{
+                width: 100%;
+                @include flex_box($justify: flex-start, $col-gap: 15px);
+                list-style: none;
+
+
+                & li{
+                    height: $footer-body-icon-height;
+                    background-color: $footer-body-icon-bg-clr;
+                    aspect-ratio: 1;
+                    border: none;
+                    border-radius: 50%;
+
+                    @include flex_box();
+                    cursor: pointer;
+                    transition: 
+                        color .25s ease-in,
+                        transform .25s ease-in
+                    ;
+                    
+                    & i{
+                        display: block;
+                        margin: auto;
+                        font-size: $footer-body-icon-size;
+                        color: $footer-body-icon-clr;
+                        
+                        &:hover{
+                            transform: scale(1.25);
+                        }
+                    }
+                    
+                }
+
+            }
+        }
+
+        & .content__tabs{
+            width: 100%;
+            @include grid($cols: 2, $justify: sketch, $row-gap: 10px);
+
+            @include mq(large) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            & .tab{
+                list-style: none;
+
+                &__header{
+                    font-size: $footer-nav-header-size;
+                    color: $footer-nav-header-clr;
+                    font-weight: $footer-nav-header-weight;
+                }
+
+                &__item{
+                    cursor: pointer;
+                    padding: 2.5px 0;
+                    font-size: $footer-nav-item-size;
+                    color: $footer-nav-item-clr;
+                    font-weight: $footer-nav-item-weight;
+                }
+            }
+        }
+    }
+
+    & .footer-attribute{
+
+        & p{
+            text-align:  center;
+
+            & a{
+
+            }
+        }
+    }
+}

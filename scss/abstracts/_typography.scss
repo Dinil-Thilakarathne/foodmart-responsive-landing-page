@@ -1,0 +1,20 @@
+$ff-base: 'Nunito Sans', sans-serif;
+
+// font sizes global tokens  
+$fs-200: clamp(0.61rem, calc(0.58rem + 0.12vw), 0.70rem);
+$fs-300: clamp(0.73rem, calc(0.68rem + 0.26vw), 0.94rem);
+$fs-400: clamp(0.88rem, calc(0.78rem + 0.47vw), 1.25rem);
+$fs-500: clamp(1.05rem, calc(0.90rem + 0.77vw), 1.67rem);
+$fs-600: clamp(1.26rem, calc(1.02rem + 1.20vw), 2.22rem);
+$fs-700: clamp(1.51rem, calc(1.15rem + 1.81vw), 2.96rem);
+$fs-800: clamp(1.81rem, calc(1.28rem + 2.67vw), 3.95rem);
+$fs-900: clamp(2.18rem, calc(1.41rem + 3.85vw), 5.26rem);
+
+// font weight global tokens 
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-xbold: 800;
+
+

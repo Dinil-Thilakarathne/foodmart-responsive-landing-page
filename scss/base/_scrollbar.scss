@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+::-webkit-scrollbar{
+    width: $scroll-bar-width;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: $scroll-bar-bg-color;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: $scroll-bar-hover-bg-color;
+
+}

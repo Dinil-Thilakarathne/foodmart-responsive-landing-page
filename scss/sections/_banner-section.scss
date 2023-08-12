@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+.banners{
+    width: 100%;
+    @include grid($row-gap: 20px, $col-gap:20px);
+    padding: $size-4 $size-5;
+    position: relative;
+    overflow: hidden;
+
+    & .banner{
+        height: 250px;
+        width: 100%;
+        padding: $size-2 $size-4;
+        border: none;
+        border-radius: $size-4;
+        @include flex_box($direction: column);
+
+        &__content{
+            height: 100%;
+            @include grid($justify: start,$row-gap:10px);
+
+            & h3{
+                font-size: $fs-300;
+            }
+
+            & h1{
+                font-size: $fs-500;
+                font-weight: $fw-bold;
+            }
+
+            & p{
+                font-size: $fs-300;
+            }
+
+            & .button{
+                padding: $size-2 $size-2 * 4;
+            }
+        }
+
+        &__image{
+            width: 60%;
+        }
+    }
+
+    & .banner:nth-child(1){
+        background-color: $clr-primary-yellow-200;
+    }
+    & .banner:nth-child(2){
+        background-color: $clr-primary-blue-100;
+    }
+
+    @include mq(small){
+        & {
+
+
+            & .banner {
+                flex-direction: row;
+            }
+        }
+    }
+    @include mq(medium){
+        & {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}

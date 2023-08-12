@@ -1,0 +1,56 @@
+@use '../abstracts' as *;
+
+.subscribe{
+    width: min(90%,1440px);
+    margin: 0 auto;
+    background-color: $clr-primary-green-100;
+    padding: $size-6 $size-4;
+    border: none;
+    border-radius: $size-4; 
+    @include grid();
+
+    &-content{
+        width: 100%;
+        @include grid();
+
+        & h1{
+            font-size: $fs-700;
+            font-weight: $fw-bold;
+        }
+    }
+
+    &-form{
+        padding-top: 50px;
+        width: 100%;
+        @include grid($justify: start);
+
+        & input{
+            width: 100%;
+            border: 1px solid $clr-secondary-400;
+            border-radius: $size-1;
+            height: $size-8;
+            padding: $size-2 $size-4;
+            
+            &:not(:last-child){
+                margin-bottom: 20px;
+
+            }
+        }
+
+        & button{
+            width: 100%;
+        }
+    }
+
+    @include mq(medium){
+        &{
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+
+            &-content{
+                padding-right: 20px;
+            }
+
+        }
+    }
+}

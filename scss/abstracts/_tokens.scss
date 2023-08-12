@@ -1,0 +1,94 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+// body 
+$body-fs: $fs-400;
+$body-fw: $fw-regular;
+$body-line-height: auto;
+
+// buttons 
+$btn-default-padding: $size-2;
+$btn-default-txt-clr: $clr-primary-txt-400;
+$btn-default-txt-size: $fs-400;
+$btn-default-txt-weight: $fw-semibold;
+$btn-dafault-txt-bg-clr: transparent;
+$btn-dafault-border-radius: $size-2;
+
+$btn-primary-bg-clr: $clr-primary-yellow-400;
+$btn-primary-hover-bg-clr: $clr-primary-yellow-300;
+
+$btn-ouline-border-clr: $clr-secondary-400;
+$btn-ouline-hover-bg-clr: $clr-secondary-400;
+$btn-ouline-hover-txt-clr: $clr-primary-txt-100;
+
+// cards 
+$card-default-padding: $size-5;
+$card-default-txt-clr: $clr-primary-txt-400;
+$card-default-txt-size: $fs-400;
+$card-default-txt-weight: $fw-semibold;
+$card-dafault-txt-bg-clr: transparent;
+$card-dafault-border-radius: $size-2;
+
+
+// header 
+$header-height : 75px;
+
+$header-menu-bg-clr: $clr-primary-yellow-200;
+$header-menu-border-radius: $size-4;
+$header-menu-txt-size: $fs-700;
+$header-menu-txt-weight: $fw-bold;
+$header-menu-item-transition: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+
+// hero section 
+$hero-card-img-paddingInverse: $card-default-padding;
+$hero-card-img-border-radius: $card-dafault-border-radius;
+
+$hero-card-content-padding: $card-default-padding;
+$hero-card-content-subtitle-size: $fs-300;
+$hero-card-content-subtitle-weight: $fw-semibold;
+$hero-card-content-title-size: $fs-700;
+$hero-card-content-title-weight:  $fw-bold;
+$hero-card-content-info-size: $fs-300;
+$hero-card-content-info-weight: $fw-regular;
+
+
+// category section 
+$category-card-shadow:   4.5px 4.5px 3.6px rgba(0, 0, 0, 0.029),
+12.5px 12.5px 10px rgba(0, 0, 0, 0.039),
+15px 15px 24.1px rgba(0, 0, 0, 0.047),
+250px 25px 40px rgba(0, 0, 0, 0.07); 
+
+// brands section 
+$brand-card-shadow:  4.5px 4.5px 3.6px rgba(0, 0, 0, 0.029),
+12.5px 12.5px 10px rgba(0, 0, 0, 0.039),
+15px 15px 24.1px rgba(0, 0, 0, 0.047) ;
+$brands-grid-gap: $size-2;
+
+// trending cards section 
+$card-gap: $size-3;
+$card-border-radius: $size-4;
+$card-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.029),
+12.5px 12.5px 10px rgba(0, 0, 0, 0.039),
+15px 15px 24.1px rgba(0, 0, 0, 0.047) ;
+$card-padding: $size-2;
+
+// footer 
+$footer-body-icon-height: 40px;
+$footer-body-icon-size: $fs-600;
+$footer-body-icon-bg-clr: $clr-primary-yellow-400;
+$footer-body-icon-clr: $clr-primary-txt-100;
+
+
+$footer-nav-header-size: $fs-600;
+$footer-nav-header-weight: $fw-semibold;
+$footer-nav-header-clr: $clr-primary-txt-400;
+$footer-nav-item-size: $fs-400;
+$footer-nav-item-weight: $fw-regular;
+$footer-nav-item-clr: $clr-primary-txt-200;
+
+// scroll bar 
+$scroll-bar-width : 10px;
+$scroll-bar-bg-color: $clr-primary-yellow-300;
+$scroll-bar-hover-bg-color: $clr-primary-yellow-400;

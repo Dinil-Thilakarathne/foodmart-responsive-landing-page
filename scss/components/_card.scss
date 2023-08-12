@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.card{
+    font-size: $card-default-txt-size;
+    font-weight: $card-default-txt-weight;
+    color: $card-default-txt-clr;
+    background-color: $card-dafault-txt-bg-clr;
+    border: none;
+    border-radius: $card-dafault-border-radius;
+    overflow: hidden;
+    
+    &.size-2{
+        padding: calc($card-default-padding*1.25) calc($card-default-padding*1.75);
+    }
+}

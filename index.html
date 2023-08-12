@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/site-icon.png" type="image/x-icon">
+    <title>Food Mart</title>
+
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">  
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    
+    <!-- boxicon cdn  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css file  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- site header  -->
+    <header 
+        class="header"
+    >
+        <div 
+            class="header__logo"
+        >
+            <img src="assets/logo.png" alt="">
+        </div>
+        <nav class="header__nav">
+            <div 
+                class="menu__icon"
+            >
+                <span></span>
+            </div>
+            <ul class="nav__menu">
+                <li class="menu__item"> 
+                    <a href="#" class="menu__link">
+                        home
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#trending-product" class="menu__link">
+                        shop
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#category" class="menu__link">
+                        category
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        blog
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#subscribe" class="menu__link">
+                        contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- hero section  -->
+    <section class="hero section" id="hero" data-scroll-container>
+        <div 
+            class="card card-1"
+            
+        >
+            <div class="card__content">
+                <h3 class="content__subtitle">
+                    100% natural
+                </h3>
+                <h1 class="content__title split" id="text-anim">
+                    Fresh Smoothie & Summer Juice
+                </h1>
+                <p class="content__info">
+                    Best selling summer juice with natural extracts.
+                </p>
+                <button class="button outline content__btn">
+                    shop now
+                </button>
+            </div>
+            <div class="card__image">
+                <img src="assets/card-1.png" alt="">
+            </div>
+        </div>
+        <div class="card card-2">
+            <div class="card__content">
+                <h3 class="content__subtitle">
+                    20% off
+                </h3>
+                <h1 class="content__title">
+                    Fruits & Vegetables
+                </h1>
+                <button class="button content__btn">
+                    shop the category
+                    <i class='bx bx-right-arrow-alt'></i>
+                </button>
+            </div>
+            <div class="card__image">
+                <img src="assets/card-2.png" alt="">
+            </div>
+        </div>
+        <div class="card card-3">
+            <div class="card__content">
+                <h3 class="content__subtitle">
+                    15% off
+                </h3>
+                <h1 class="content__title">
+                    Baked Products
+                </h1>
+                <button class="button content__btn">
+                    shop the category
+                    <i class='bx bx-right-arrow-alt'></i>
+                </button>
+            </div>
+            <div class="card__image">
+                <img src="assets/card-3.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- category section  -->
+    <section class="category section swiper mySwiper" id="category" data-scroll-container>
+        <h1 class="category__header">
+            category
+        </h1>
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- brands section  -->
+    <section class="brand section" id="brand">
+        <h1 class="brand__header">
+            New Arrived Brands
+        </h1>
+        <div class="brands">
+            <div class="card card-1">
+                <img src="assets/brand-1.png" alt="" class="card__img">
+                <div class="card__content">
+                    <h3 class="content__subtitle">
+                        Amber Jar
+                    </h3>
+                    <h1 class="content__title">
+                        Honey best nectar you wish to get
+                    </h1>
+                </div>
+            </div>
+            <div class="card card-2">
+                <img src="assets/brand-2.png" alt="" class="card__img">
+                <div class="card__content">
+                    <h3 class="content__subtitle">
+                        Pure Herb
+                    </h3>
+                    <h1 class="content__title">
+                        Pure herb the only natural brand
+                    </h1>
+                </div>
+            </div>
+            <div class="card card-3">
+                <img src="assets/brand-3.png" alt="" class="card__img">
+                <div class="card__content">
+                    <h3 class="content__subtitle">
+                        Tuna
+                    </h3>
+                    <h1 class="content__title">
+                        Where's tuna? Tuna, clear choice!
+                    </h1>
+                </div>
+            </div>
+            <div class="card card-4">
+                <img src="assets/brand-4.png" alt="" class="card__img">
+                <div class="card__content">
+                    <h3 class="content__subtitle">
+                        Hotz
+                    </h3>
+                    <h1 class="content__title">
+                    The one junk food that’s natural
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- trending product section  -->
+    <section class="trending-product section" id="trending-product" data-scroll-container>
+        <h1 class="trending-product__header">
+            Trending Products
+        </h1>
+        <div class="trending-product__cards">
+
+        </div>
+    </section>
+
+    <!-- banner section  -->
+    <section class="banners section" id="banners" data-scroll-container>
+        <div class="banner">
+            <div class="banner__content">
+                <h3 class="content__subtitle">
+                    Upto 15% Off
+                </h3>
+                <h1 class="content__title">
+                    Luxa Dark Chocolate
+                </h1>
+                <p class="content__info">
+                    Chocolate is only the happiness that you can eat.
+                </p>
+                <button class="button outline">
+                    Shop It
+                </button>
+            </div>
+            <img src="assets/banner-1.png" class="banner__image"></img>
+        </div>
+        <div class="banner">
+            <div class="banner__content">
+                <h3 class="content__subtitle">
+                    Upto 25% Off
+                </h3>
+                <h1 class="content__title">
+                    Creamy Muffins
+                </h1>
+                <p class="content__info">
+                    Very tasty & creamy vanilla flavour creamy muffins.
+                </p>
+                <button class="button outline">
+                    Shop It
+                </button>
+            </div>
+            <img src="assets/banner-2.png" class="banner__image"></img>
+        </div>
+    </section>
+
+    <!-- subscription form  -->
+    <section class="subscribe section" id="subscribe" data-scroll-container>
+        <div class="subscribe-content" data-scroll-section>
+            <h1 class="content__header">
+                Get 20% discount on your first purchase
+            </h1>
+            <p class="content__description">
+                Just Sign Up & Register it now to become member of Templates Jungle.
+            </p>
+        </div>
+        <form class="subscribe-form" data-scroll-section>
+            <label for="user-email">
+                Email address
+            </label>
+            <input type="email" name="user-email" class="user__email">
+
+            <label for="user-pw">
+                Password
+            </label>
+            <input 
+                class="user__pw" 
+                type="password" 
+                name="user-pw" 
+                autocomplete="new-password"
+                pattern="[0-9a-fA-F]{4,8}"
+                required
+            />
+
+            <label for="repeat-pw">
+                Repeat password
+            </label>
+            <input 
+                class="user__repeat-pw"
+                type="password" 
+                name="repeat-pw" 
+                autocomplete="new-password"
+                pattern="[0-9a-fA-F]{4,8}"
+                required
+            />
+
+            <button type="submit" class="button outline">
+                Register it now
+            </button>
+        </form>
+    </section>
+    <!-- footer section  -->
+    <footer >
+        <div class="footer-content">
+            <div class="content__body">
+                <img 
+                    src="assets/logo.png"
+                    alt="footer logo" 
+                    class="body__logo"
+                >
+                <ul
+                 class="icon__list"
+                >
+                    <li>
+                        <i class='bx bxl-facebook-circle'></i>
+                    </li>
+                    <li>
+                        <i class='bx bxl-instagram-alt' ></i>
+                    </li>
+                    <li>
+                        <i class='bx bxl-twitter' ></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="content__tabs">
+                <ul class="tab">
+                    <li class="tab__header">
+                        Quick links
+                    </li>
+                    <li class="tab__item">
+                        Home
+                    </li>
+                    <li class="tab__item">
+                        About us
+                    </li>
+                    <li class="tab__item">
+                        Offers
+                    </li>
+                    <li class="tab__item">
+                        Contact us
+                    </li>
+                </ul>
+                <ul class="tab">
+                    <li class="tab__header">
+                        About
+                    </li>
+                    <li class="tab__item">
+                        How it work
+                    </li>
+                    <li class="tab__item">
+                        Our packages
+                    </li>
+                    <li class="tab__item">
+                        Promotions
+                    </li>
+                    <li class="tab__item">
+                        Refer a friend
+                    </li>
+                </ul>
+                <ul class="tab">
+                    <li class="tab__header">
+                        Help Centre
+                    </li>
+                    <li class="tab__item">
+                        Payments
+                    </li>
+                    <li class="tab__item">
+                        Shipping
+                    </li>
+                    <li class="tab__item">
+                        Product returns
+                    </li>
+                    <li class="tab__item">
+                        FAQs
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-attribute">
+            <p>
+                Develop by 
+                <a href="https://linktr.ee/sona_code">
+                    Dinil Thilakarathne
+                </a>
+            </p>
+            <p>
+                &copy; 2022 Copyright 
+                <a href="https://templatesjungle.gumroad.com/">
+                    TemplatesJungle.
+                </a> 
+                All rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <!-- scripts  -->
+    <script type="module" src="scripts/main.js"></script>
+
+    <!-- gsap js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scripts/gsap.js" defer></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper.js" defer></script>
+
+    <!-- lenis js  -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+    <script src="scripts/lenis.js" defer></script>
+
+    <!-- locomotive scroll  -->
+    <script src="locomotive-scroll.min.js"></script>
+    <script src="scripts/locomotive.js" defer></script>
+</body>
+</html>

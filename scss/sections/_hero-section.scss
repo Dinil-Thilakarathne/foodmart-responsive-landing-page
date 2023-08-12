@@ -1,0 +1,126 @@
+@use '../abstracts' as *;
+
+.hero{
+    min-height: calc(100vh - $header-height);
+    width: 100%;
+    @include grid($align: space-around,$row-gap:20px);
+    overflow: hidden;
+
+
+    & .card{
+        min-height: 200px;
+        width: 90%;
+        @include flex_box($justify: space-between);
+        position: relative;
+        // padding: $size-2 ;
+
+        & .card__content{
+            width: 50%;
+            @include flex_box($direction: column, $align: flex-start, $row-gap: $size-2);
+            padding: $hero-card-content-padding;
+            
+            & h3{
+                font-size: $hero-card-content-subtitle-size;
+                font-weight: $hero-card-content-subtitle-weight;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    bottom: -2px;
+                    height: 4px;
+                    background-color: $clr-primary-yellow-500;
+                }
+            }
+            & h1{
+                font-size: $hero-card-content-title-size;
+                font-weight: $hero-card-content-title-weight;
+            }
+            & p{
+                font-size: $hero-card-content-info-size;
+                font-weight: $hero-card-content-info-weight;
+            }
+        }
+        &__image{
+            height: 100%;
+            width: 50%;
+
+
+            & img{
+                // max-width: 50%;
+                float: right;
+            }
+        }
+    }
+    & .card-1{
+        background-color: $clr-primary-blue-200;
+        
+        & .card__content{
+            padding-right: 0;
+        }
+
+        & .card__image{
+            height: 100%;
+            @include flex_box($justify: flex-end);
+
+            & img{
+                max-width: 55%;
+            }
+        }
+    }
+    & .card-2{
+        background-color: $clr-primary-green-100;
+    }
+    & .card-3{
+        background-color: $clr-primary-yellow-200;
+    }
+    & .card-2,
+    & .card-3{
+        & .card__content{
+            & .content__btn{
+                padding: 0;
+                @include flex_box();
+
+                & i{
+                    padding-left: $size-1;
+                    font-size: $fs-500;
+                    transition: transform .25s ease-in;
+                }
+
+                &:hover{
+                    & i{
+                        transform: translateX(10px);
+                    }
+                }
+            }
+            
+        }
+        & .card__image{
+            @include flex_box($align: flex-end);
+
+            & img{
+                position: relative;
+                border: none;
+                border-bottom-right-radius: $hero-card-img-border-radius;
+            }
+        }
+    }
+
+    @include mq(medium){
+        & {
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 45% 45%;
+
+            & .card-1{
+                grid-row-start: 1;
+                grid-row-end: 3;
+
+                & .card__image img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

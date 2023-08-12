@@ -1,0 +1,142 @@
+@use '../abstracts' as *;
+
+.header{
+    height: $header-height;
+    width: 100%;
+    @include flex_box();
+    padding-inline: min(20px,10vw);
+
+    
+    &__logo{
+        height: 100%;
+        width: 40%;
+        @include flex_box();
+    }
+    &__nav{
+        height: 100%;
+        width: 60%;
+        position: relative;
+        z-index: 99;
+        & .menu__icon{
+            height: 100%;
+            position: absolute;
+            right: 10px;
+            @include flex_box();
+            cursor: pointer;
+            overflow: hidden;
+
+            span{
+                position: relative;
+                -webkit-transition-duration: 0s; transition-duration: 0s;
+                -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+
+                &,
+                &::before,
+                &::after{
+                    width: 30px;
+                    height: 6px;
+                    background-color: $clr-secondary-400;
+                    display: block;
+                    border-radius: 5px;
+                }
+                &::before,
+                &::after{
+                    position: absolute;
+                    content: '';
+                }
+                &::before{
+                    margin-top: -12px;
+                    -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+                    -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+                    -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+                }
+                &::after{
+                    margin-top: 12px;
+                    -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+                    -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+                    -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+                }
+            }
+            &.active span{
+                background-color: rgba(0,0,0,0.0);
+                -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+
+                &::before{
+                    margin-top: 0;
+                    -webkit-transform: rotate(45deg); transform: rotate(45deg);
+                    -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+                }
+                &::after{
+                    margin-top: 0;
+                    -webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+                    -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+                }
+            }
+        }
+        & .nav__menu{
+            height: 0;
+            width: max(25%,280px);
+            position: absolute;
+            right: 10px;
+            top: calc($header-height + 10px);
+            background-color: $header-menu-bg-clr;
+            border: none;
+            border-radius: $header-menu-border-radius;
+            @include flex_box($direction: column,$justify: center,$row-gap: $size-8);
+            overflow: hidden;
+            transition: height .75s $header-menu-item-transition;
+
+            &.active{
+                height: max(60vh, 450px);
+            }
+
+            & li{
+                font-size: $header-menu-txt-size;
+                font-weight: $header-menu-txt-weight;
+                text-transform: uppercase;
+                transform: translateY(-100px)
+                           translateX(100px)
+                           scale(0);
+                transition: all .75s $header-menu-item-transition;
+                &.active{
+                    transform: translateY(0)
+                    translateX(0)
+                    scale(1);
+                }
+                & a{
+                    color: $clr-primary-txt-400;
+
+                    &:is(:focus, :hover){
+                        color: $clr-primary-txt-300;
+                    }
+                }
+
+            }
+        }
+    }
+    
+    @include mq(medium){
+        & .menu__icon{
+            display: none;
+        }
+
+        & .nav__menu{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            flex-direction: row;
+            justify-content: flex-end;
+            column-gap: 1.25rem;
+
+            & li{
+                transform: translateX(0)
+                            translateY(0)
+                            scale(1);
+                font-size: $fs-400;
+            }
+        }
+    }
+}

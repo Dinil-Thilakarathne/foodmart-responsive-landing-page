@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+.category{
+    min-height: 250px;
+    width: 100%;
+    @include flex_box();
+    padding: $size-2 $size-5;
+    position: relative;
+
+    &__header{
+        position: absolute;
+        top: $size-5;
+        left: $size-5;
+        font-size: $fs-600;
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        padding-bottom: $size-4;
+    }
+
+    .swiper-slide {
+      min-height: 150px;
+      aspect-ratio: 1;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      @include flex_box($direction: column,$justify: center,$row-gap: $size-4);
+
+      box-shadow: $category-card-shadow;
+    }
+
+    @include mq(medium){
+      & {
+        min-height: 400px;
+
+        & .swiper-slide{
+          max-height: 250px;
+        }
+      }
+      // & {
+      //   .swiper-slide{
+      //     max-height: 200px;
+      //   }
+      // }
+    }
+}

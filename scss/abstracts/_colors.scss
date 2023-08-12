@@ -1,0 +1,70 @@
+$colors : (
+    primary-yellow : (
+        500 : hsl(42,100%,62%),
+        400 : hsl(42,100%,70%),
+        300 : hsl(42,100%,77%),
+        200 : hsl(41,100%,89%),
+        100 : hsl(42,100%,96%)
+    ),
+    primary-blue: (
+        500 : hsl(201,70%,61%),
+        400 : hsl(201,94%,67%),
+        300 : hsl(201,95%,71%),
+        200 : hsl(201,95%,77%),
+        100 : hsl(201,94%,87%)
+    ),
+    primary-green: (
+        500: hsl(85,95%,44%),
+        400: hsl(85,94%,49%),
+        300: hsl(85,90%,54%),
+        200: hsl(85,90%,64%),
+        100: hsl(85,90%,85%),
+    ),
+    primary-txt: (
+        500: hsl(0,0%,0%),
+        400: hsl(0,0%,20%),
+        300: hsl(0,0%,60%),
+        200: hsl(0,0%,80%),
+        100: hsl(0,0%,100%),
+    ),
+    secondary: (
+        400: hsl(0,0%,20%),
+        300: hsl(0,0%,60%),
+        200: hsl(0,0%,80%),
+        150: hsl(0,0%,90%),
+        175: hsl(0,0%,95%),
+        100: hsl(0,0%,100%),
+    )
+);
+
+// gloabal color tokens
+$clr-primary-yellow-500: hsl(42, 100%, 62%);
+$clr-primary-yellow-400: hsl(42, 100%, 70%);
+$clr-primary-yellow-300: hsl(42, 100%, 77%);
+$clr-primary-yellow-200: hsl(41, 100%, 89%);
+$clr-primary-yellow-100: hsl(42, 100%, 96%);
+$clr-primary-blue-500: hsl(201, 70%, 61%);
+$clr-primary-blue-400: hsl(201, 94%, 67%);
+$clr-primary-blue-300: hsl(201, 95%, 71%);
+$clr-primary-blue-200: hsl(201, 95%, 77%);
+$clr-primary-blue-100: hsl(201, 94%, 87%);
+$clr-primary-green-500: hsl(85, 95%, 44%);
+$clr-primary-green-400: hsl(85, 94%, 49%);
+$clr-primary-green-300: hsl(85, 90%, 54%);
+$clr-primary-green-200: hsl(85, 90%, 64%);
+$clr-primary-green-100: hsl(85, 90%, 85%);
+$clr-primary-txt-500: hsl(0, 0%, 0%);
+$clr-primary-txt-400: hsl(0, 0%, 20%);
+$clr-primary-txt-300: hsl(0, 0%, 60%);
+$clr-primary-txt-200: hsl(0, 0%, 80%);
+$clr-primary-txt-100: hsl(0, 0%, 100%);
+$clr-secondary-400: hsl(0, 0%, 20%);
+$clr-secondary-300: hsl(0, 0%, 60%);
+$clr-secondary-200: hsl(0, 0%, 80%);
+$clr-secondary-150: hsl(0, 0%, 90%);
+$clr-secondary-175: hsl(0, 0%, 95%);
+$clr-secondary-100: hsl(0, 0%, 100%);
+
+// default color tokens 
+$default-bg-color: $clr-secondary-100;
+$default-txt-color: $clr-primary-txt-400;

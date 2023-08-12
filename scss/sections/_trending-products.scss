@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+
+.trending-product{
+
+    width: 100%;
+    @include grid($justify: start );
+    padding: $size-2 $size-5;
+    position: relative;
+    overflow: hidden;
+
+    &__header{
+        font-size: $fs-600;
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        padding-bottom: $size-4;
+    }
+
+    &__cards{
+        width: 100%;
+        @include grid($cols: 1,$row-gap: $card-gap, $col-gap:$card-gap);
+
+        & .card{
+            height: max(30vh, 400px);
+            width: 100%;
+            position: relative;
+            box-shadow: $card-shadow;
+            padding: $card-padding;
+            border: none;
+            border-radius: $card-border-radius;
+            @include flex_box($direction: column,$justify: center, $row-gap:20px);
+
+            &__icon{
+                position: absolute;
+                right: $card-padding * 1.75;
+                top: $card-padding * 1.75;
+                font-size: $fs-500;
+                cursor: pointer;
+                color: $clr-secondary-300;
+
+            }
+
+            &__img{
+                height: 220px;
+                width: 100%;
+                @include flex_box($justify: center);
+                border: none;
+                border-radius: $card-border-radius;    
+                background-color: $clr-secondary-150;
+            }
+            
+            
+            &__content{
+                padding-inline: 10px;
+                height: 120px;
+                width: 100%;
+                @include flex_box($direction: column, $align: flex-start,$justify: center,$row-gap:10px );
+
+                & .content-top{
+                    width: 100%;
+                    @include flex_box($direction: column, $align: flex-start);
+
+                    & .card__title{
+                        font-size: $fs-400;
+                        font-weight: $fw-bold;
+
+                        &:is(:hover, :focus){
+                            cursor: pointer;
+                            color: $clr-primary-yellow-500;
+                        }
+                    }
+
+                    & .card__subtitle{
+                        font-size: $fs-200;
+                        color: $clr-primary-txt-300;
+                    }
+                }
+
+                & .content-bottom{
+                    width: 100%;
+                    @include flex_box($direction: column, $align: flex-start);
+
+                    & .card__price{
+                        font-size: $fs-500;
+                        font-weight: $fw-bold;
+                    }
+
+                    & .card__btn{
+                        width: 100%;
+                        @include flex_box($direction: row-reverse,$justify: center, $col-gap: 15px);
+
+                        & i{
+                            font-size: $fs-500;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    @include mq(small){
+        &__cards{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @include mq(medium){
+        &__cards{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @include mq(large){
+        &__cards{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

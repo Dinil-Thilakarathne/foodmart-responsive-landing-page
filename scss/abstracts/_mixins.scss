@@ -1,0 +1,43 @@
+// mixins 
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "breakpoints" as *;
+@use "tokens" as *;
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}
+
+
+
+@mixin flex_box($direction: row, $align: center, $justify: space-between,$row-gap: 0, $col-gap:0)  {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $row-gap $col-gap;
+}
+
+@mixin grid($cols: 1, $align: center, $justify: center, $row-gap: 0, $col-gap:0) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    align-content: $align;
+    justify-items: $justify;
+    gap: $row-gap $col-gap;
+}

@@ -1,0 +1,59 @@
+@use '../abstracts' as *;
+
+.brand{
+    // min-height: 250px;
+    width: 100%;
+    @include grid($justify: start );
+    padding: $size-2 $size-5;
+    position: relative;
+    overflow: hidden;
+
+    &__header{
+        font-size: $fs-600;
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        padding-bottom: $size-4;
+    }
+
+    & .brands{
+        width: 100%;
+        @include grid($row-gap: $brands-grid-gap ,$col-gap: $brands-grid-gap);
+
+        & .card{
+            width: 100%;
+            @include flex_box();
+            background-color: $clr-secondary-100;
+            box-shadow: $brand-card-shadow;
+            padding: $size-3;
+
+            &__img{
+                border-radius: $size-2;
+            }
+
+            &__content{
+                padding-inline: $size-6;
+
+                & h3{
+                    font-size: $fs-300;
+                    color: $clr-primary-txt-300;
+                }
+
+                & h1{
+                    font-size: $fs-500;
+                    font-weight: $fw-semibold;
+                }
+            }
+        }
+    }
+
+    @include mq(medium){
+        & .brands{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @include mq(large){
+        & .brands{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
